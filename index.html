@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+  <script src="/script.js" ></script>
+
+</head>
+<body>
+  <div class="swiper ring-sizer mob">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide visible" id="step1">
+          <div class="main-wrapper">
+            <div class="text-content">
+
+              <span class="step">Passo 1</span>
+              <p>Para descobrir o tamanho do aro de um anel, você vai precisar de:</p>
+              <ul>
+                <li>Um anel com o tamanho desejado;</li>
+                <li>Cartão de crédito ou semelhante (com as mesmas dimensões 85,6 x 53,9 mm );</li>
+              </ul>
+            </div>
+          </div>
+          <div class="button-wrapper bottom">
+            <button onclick="nextStep()" id="next-step" class="next-button">
+                PRÓXIMO
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide" id="step2">
+          <div class="button-wrapper top">
+            <button onclick="prevStep()" id="next-step" class="prev-button">
+                < VOLTAR
+            </button>
+          </div>
+          <div class="main-wrapper">
+            <div class="text-content">
+              <span class="step">Passo 2</span>
+              <p>
+                Posicione o seu cartão de crédito na horizontal, por cima da imagem de cartão de crédito que você está vendo na sua tela.
+                Ajuste o contorno preto da imagem deslizando o circulo na parte inferior da tela para esquerda ou direita, ou usando os botões de "+" e "-".
+                <p>A linha preta deve estar alinhada com o seu cartão, mas <b>ainda estar visível</b>.</p>
+              </p>
+              <p>Em seguida clique em 'Próximo'.</p>
+            </div>
+            
+            <div id="card-image" class="card-credit-image">
+              <div class="card-stripe"></div>
+              <div class="card-stripe-2"></div>
+            </div>
+          </div>
+          <div class="range-wrapper">
+            <button onclick="" id="less-value" class="control-button">-</button>
+            <input id="range-control" class="range-control" type="range" min="100" max="500" step="2" value="300">
+            <button onclick="" id="more-value" class="control-button">+</button>
+          </div>
+          <div class="button-wrapper bottom">
+            <button onclick="nextStep()" id="next-step-calibrated" class="next-button">
+              PRÓXIMO
+            </button>
+          </div>
+        </div>
+
+        <div class="swiper-slide" id="step3">
+          <div class="button-wrapper top">
+            <button onclick="prevStep()" id="next-step" class="prev-button">
+              < VOLTAR
+            </button>
+          </div>
+          <div class="main-wrapper">
+            <div class="text-content">
+              <span class="step">Passo 3</span>
+              <p>Coloque o seu anel no circulo e alinhe a borda preta com a sua parte interna.</p>
+              <p>Use os botões + e - para ajustar o tamanho do círculo até que você não consiga ver nenhum rosa dentro do anel.</p>
+            </div>
+            <div class="ring-wrapper">
+              <div class="ring" id="ring">
+                <span class="ring-size" id="ring-size">mm</span>
+              </div>
+            </div>
+          </div>
+          <div class="rim-wrapper">
+            <span>O aro do seu anel é <span id="ring-rim"></span></span>
+          </div>
+          <div class="range-wrapper">
+            <button onclick="decreaseSize()" id="decrease-size" class="control-button">-</button>
+            <input id="size-ring-control" class="range-control" type="range" min="10" max="35" step="1" value="13">
+            <button onclick="increaseSize()" id="increase-size" class="control-button">+</button>
+          </div>
+          <div class="button-wrapper bottom">
+            <button onclick="nextStep()" id="next-step" class="next-button">
+              SELECIONAR ESSE TAMANHO
+            </button>
+          </div>
+        </div>
+    </div>
+ </div>
+  
+</body>
+</html>

@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.ring-sizer.mob *{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+} 
+.ring-sizer.mob button {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .ring-sizer.mob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .swiper-wrapper {
+      .swiper-slide#step2 .main-wrapper {
+        padding: 0 0 0 90px !important;
+      }
+      
+      max-width: 1200px;
+      .swiper-slide {
+        .button-wrapper.top {
+          padding: 0 90px !important;
+        }
+        .range-wrapper .range-control {
+          max-width: 350px;
+        }
+        .button-wrapper .next-button {
+          max-width: 350px;
+        }
+        .main-wrapper .ring-wrapper {
+          width: 170px !important;
+          height: 170px !important;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+.ring-sizer.mob {
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    .hidden {
+      display: none;
+    }
+    .swiper-slide.visible {
+      display: flex;
+    }
+
+    .swiper-slide#step3 {
+      .main-wrapper {
+        height: 71%;
+      }
+    }
+
+    .swiper-slide#step2 {
+      .main-wrapper {
+        width: 55%;
+        height: 76%;
+        padding: 0 0 0 20px;
+      }
+    }
+    .swiper-slide#step1 {
+      .main-wrapper {
+        height: 92%;
+        width: 100%;
+        ul {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+
+    .swiper-slide {
+      height: 100vh;
+      display: none;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+
+      .main-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        width: 100%;
+        .text-content {
+          p, span, ul, li {
+            font-size: 18px;
+          }
+          .step {
+            display: block;
+            margin: 0 0 8px;
+            font-weight: bold;
+            color: #333;
+          }
+
+
+        }
+
+        .ring-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 0;
+
+          width: 100%;
+          height: 170px !important;
+          margin-top: 20px;
+          background-color: #e8927c;
+
+          .ring {
+            background-color: #FFF;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .card-credit-image {
+          position: absolute;
+          border: 2px solid #333;
+          border-radius: 15px;
+          top: 30%;
+          left: 60%;
+          background-color: #f1bbad;
+          aspect-ratio: 8 / 2;
+          min-height: 100px;
+          height: 300px;
+          aspect-ratio: 8.56 / 5.398;
+
+          .card-stripe {
+            height: 20%;
+            margin-top: 7%;
+            width: 100%;
+            background-color: #e8927c;
+          }
+          .card-stripe-2 {
+            height: 17%;
+            margin-left: 5.5%;
+            margin-top: 5%;
+            width: 55%;
+            background-color: #f1cec5;
+          }
+        }
+      }
+
+      .rim-wrapper {
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        span {
+          font-size: 20px;
+        }
+        #ring-rim {
+          font-weight: bold;
+        }
+      }
+      .range-wrapper {
+        z-index: 9999;
+        width: 100%;
+        height: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5px;
+        
+        .control-button {
+          height: 25px;
+          width: 25px;
+          font-size: 22px;
+          background-color: #FFF;
+          outline: none;
+        }
+        .range-control {
+          -webkit-appearance: none;
+          width: 80%;
+          background: #000;
+          height: 1px;
+          outline: none;
+          border-radius: 5px;
+        }
+        .range-control::-webkit-slider-thumb {
+          -webkit-appearance: none; /* Remove o estilo padrão do navegador */
+          width: 20px; /* Largura do thumb */
+          height: 20px; /* Altura do thumb */
+          background: #FFF; /* Cor de fundo */
+          border: 1px solid #000;
+          border-radius: 50%; /* Transforma em um círculo */
+          cursor: pointer; /* Cursor ao passar por cima */
+        }
+      }
+      .button-wrapper.bottom {
+        height: 8%;
+        margin-bottom: 15px;    
+      }
+      .button-wrapper.top {
+        height: 10%;
+        justify-content: flex-start;
+        padding: 0 30px;
+
+        button {
+          font-size: 12px;
+        }
+      }
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .next-button {
+          background-color: #222;
+          width: 80%;
+          height: 40px;
+          color: #FFF;
+          font-size: 14px;
+        }
+        .prev-button {
+          background-color: #FFF;
+          color: #222;
+
+        }
+      }
+    }
+  }
+
+}
