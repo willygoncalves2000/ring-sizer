@@ -296,10 +296,6 @@ function showStep(step) {
   if (currentStep != 0) {
     document.getElementById('step' + step).classList.toggle('visible');
   }
-  if (currentStep == 1) {
-    var height = document.getElementById("step1");
-    alert("height: ", height.offsetHeight);
-  }
   if (currentStep == 2) {
     var cardImage = document.getElementById("card-image");
     cardImage.style.top = "30%";
